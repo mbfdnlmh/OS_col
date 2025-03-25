@@ -67,24 +67,6 @@
 # Задачки
 
 ## 1) Генерация чисел Фибоначчи
-```cpp
-#include <vector>
-#include <iostream>
-
-std::vector<int> fibonacci(int n) {
-    std::vector<int> fib{0, 1};
-    for (int i = 2; i < n; ++i) {
-        fib.push_back(fib[i - 1] + fib[i - 2]);
-    }
-    return fib;
-}
-
-int main() {
-    int n;
-    std::cin >> n;
-    auto fib = fibonacci(n);
-    for (int num : fib) std::cout << num << " ";
-}
 #include <gtest/gtest.h>
 #include <vector>
 
@@ -96,7 +78,6 @@ std::vector<int> fibonacci(int n) {
     }
     return fib;
 }
-
 TEST(FibonacciTest, BasicCases) {
     EXPECT_EQ(fibonacci(1), std::vector<int>({0}));
     EXPECT_EQ(fibonacci(2), std::vector<int>({0, 1}));
@@ -107,6 +88,8 @@ TEST(FibonacciTest, EdgeCases) {
     EXPECT_EQ(fibonacci(0), std::vector<int>());
     EXPECT_EQ(fibonacci(-5), std::vector<int>());
 }
+## 2) Палиндром
+```
 #include <gtest/gtest.h>
 #include <string>
 
@@ -125,6 +108,9 @@ TEST(PalindromeTest, NegativeCases) {
     EXPECT_FALSE(is_palindrome(123));
     EXPECT_FALSE(is_palindrome(10));
 }
+```
+## 3)Развернуть связный список используя итеративный подход
+```
 #include <gtest/gtest.h>
 
 struct Node {
@@ -162,3 +148,4 @@ TEST(LinkedListTest, ReverseList) {
     Node* reversed = reverse_list(head);
     EXPECT_EQ(list_to_vector(reversed), std::vector<int>({3, 2, 1}));
 }
+```
