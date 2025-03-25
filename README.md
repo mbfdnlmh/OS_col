@@ -111,7 +111,7 @@ TEST(PalindromeTest, NegativeCases) {
     EXPECT_FALSE(is_palindrome(10));
 }
 ```
-## 3)Развернуть связный список используя итеративный подход
+## 3) Развернуть связный список используя итеративный подход
 ```
 #include <gtest/gtest.h>
 
