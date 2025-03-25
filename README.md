@@ -67,6 +67,7 @@
 # Задачки
 
 ## 1) Генерация чисел Фибоначчи
+```
 #include <gtest/gtest.h>
 #include <vector>
 
@@ -88,6 +89,7 @@ TEST(FibonacciTest, EdgeCases) {
     EXPECT_EQ(fibonacci(0), std::vector<int>());
     EXPECT_EQ(fibonacci(-5), std::vector<int>());
 }
+```
 ## 2) Палиндром
 ```
 #include <gtest/gtest.h>
